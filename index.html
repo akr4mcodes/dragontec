@@ -1,236 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DragonTec store</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="Cgs71dntRY7ZQyBinxvaFfLTn3f-b8RV9WD47SGp_Vs" />
+  <title>DragonTec store</title>
+  <meta name="description"
+    content="DragonTec Store - Vente de PC portables gaming, bureautique, design et accessoires high-tech avec service après-vente et garantie." />
+
+  <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DragonTec Store" />
+  <meta property="og:title" content="DragonTec Store | PC Portables & Accessoires High-Tech" />
+  <meta property="og:description"
+    content="Découvrez notre sélection de PC portables gaming, bureautique et création, ainsi que nos accessoires et services d'experts." />
+  <meta property="og:image" content="dragontecstore.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="DragonTec Store" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DragonTec Store | PC Portables & Accessoires High-Tech" />
+  <meta name="twitter:description"
+    content="Découvrez notre sélection de PC portables gaming, bureautique et création, ainsi que nos accessoires et services d'experts." />
+  <meta name="twitter:image" content="dragontecstore.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="dragontecstore.png" />
+  <link rel="apple-touch-icon" href="dragontecstore.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cinzel:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="inner header-inner">
-    <span class="tag">Sticky on scroll</span>
-    <div class="top-row">
-      <div class="brand-mark">DRAGON TEC</div>
-      <div class="search-box">Search ultrabooks, gaming laptops, productivity models…</div>
-      <div class="account-links">
-        <span>Account</span>
-        <span>Wishlist</span>
-        <span class="cart-pill">Cart<span class="cart-count">3</span></span>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="animation.welcomepage.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Bienvenue sur </div>
+        <h1 class="hero-title">DRAGONTEC</h1>
+        <p class="hero-description">
+          Une boutique de PC portables et un espace de vente, physique ou e-commerce, spécialisé dans la
+          commercialisation d'ordinateurs portables et d'accessoires de haute technologie. Elle se distingue par sa
+          capacité à proposer un catalogue adapté à différents profils (bureautique, développement, gaming, design),
+          tout en assurant des services essentiels tels que le conseil technique, le service après-vente, les garanties
+          et la livraison express.
+        </p>
+        <div class="hero-cta-section">
+          <span class="hero-cta-label"></span>
+          <button class="hero-continue-btn" id="scrollToLaptops">
+            <span>Explorer la collection</span>
+            <svg class="cart-icon scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-    <nav class="site-nav">
-      <span class="nav-link active">Laptops</span><span class="nav-link">Consoles — Coming soon</span><span class="nav-link">Accessories — Coming soon</span>
-    </nav>
-  </div>
-</header>
+  </section>
 
-<!-- TRUST BAR -->
-<section style="background:var(--wash);padding:24px 0;">
-  <div class="inner">
-    <span class="tag">Reassurance strip — repeats near checkout too</span>
-    <div class="grid g4" style="text-align:center;">
-      <div><div style="width:30px;height:30px;border-radius:50%;background:var(--ph-strong);margin:0 auto 8px;"></div><div style="font-size:12px;color:var(--ink-soft);">Free shipping over $50</div></div>
-      <div><div style="width:30px;height:30px;border-radius:50%;background:var(--ph-strong);margin:0 auto 8px;"></div><div style="font-size:12px;color:var(--ink-soft);">2-year warranty</div></div>
-      <div><div style="width:30px;height:30px;border-radius:50%;background:var(--ph-strong);margin:0 auto 8px;"></div><div style="font-size:12px;color:var(--ink-soft);">Secure checkout</div></div>
-      <div><div style="width:30px;height:30px;border-radius:50%;background:var(--ph-strong);margin:0 auto 8px;"></div><div style="font-size:12px;color:var(--ink-soft);">30-day returns</div></div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="inner header-inner">
+      <div class="top-row">
+        <div class="brand-mark">
+          <img src="dragontecstore.png" alt="DragonTec Store" class="brand-logo" />
+          <div class="brand-text">DragonTec</div>
+        </div>
+        <input type="text" class="search-box" placeholder="Rechercher pour Laptops…" />
+      </div>
+      <nav class="site-nav">
+        <span class="nav-link active">Laptops</span><span class="nav-link">Consoles — Coming soon</span><span
+          class="nav-link">Accessories — Coming soon</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- LAPTOP COLLECTION -->
+  <section style="background:var(--wash);" id="laptopsSection">
+    <div class="inner">
+      <div class="row-between">
+        <div>
+          <h2 class="h2">Ordinateurs Portables</h2>
+          <p class="section-subtitle">Découvrez nos meilleurs PC portables sélectionnés avec garantie et livraison
+            express.</p>
+        </div>
+        <div class="search-counter" id="searchCounter"><span id="productCount">18</span> produits trouvés</div>
+      </div>
+
+      <!-- Category Filter Bar -->
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-chip active" data-filter="all">Tous les Laptops</button>
+        <button class="filter-chip" data-filter="macbook">Apple MacBook</button>
+        <button class="filter-chip" data-filter="gaming">Gaming & Performance</button>
+        <button class="filter-chip" data-filter="pro">Professionnel & Travail</button>
+        <button class="filter-chip" data-filter="budget">Moins de 65 000 DA</button>
+      </div>
+
+      <div class="product-showcase">
+        <article class="product-card" data-category="pro" data-name="Tilted Blade Stealth" data-price="66000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i7-8565U @ 1.80GHz (jusqu'à 2.00 GHz)|Mémoire Vive (RAM) : 8 Go|Stockage : 256 Go SSD (LITEON CV8-8E256)|Carte Graphique (GPU) : Intel® UHD Graphics 620|Système : Architecture 64 bits|Batterie : Excellente autonomie|Accessoires inclus : chargeur d'origine"
+          data-description="Ordinateur portable premium conçu pour le travail, la création et une autonomie élevée."
+          data-image="laptops/blade-stealth-13-2019-2.png"
+          data-carousel-images="laptops/blade-stealth-13-2019-2.png,laptops/blade-stealth3.png,laptops/blade_stealth-removebg-preview.png">
+          <div class="product-number">1</div>
+          <div class="product-image"><img src="laptops/blade-stealth-13-2019-2.png" alt="Tilted Blade Stealth" /></div>
+          <div class="product-body">
+            <h3>Tilted Blade Stealth</h3>
+            <p>Intel Core i7 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">66000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro budget" data-name="Lenovo IdeaPad Slim 3" data-price="59000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ 5 120U @ 1.40 GHz|Mémoire Vive (RAM) : 8 Go|Stockage : SSD High-Speed (. 256 Go SSD NVMe)|Carte Graphique (GPU) : Intel® Graphics|Écran : 14&quot; Tactile (Prise en charge du tactile à 10 points de contact)|Système : Windows 10 Enterprise LTSC (Architecture 64 bits)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine"
+          data-description="Ordinateur portable ultra-mince conçu pour la mobilité, le travail professionnel et la productivité quotidienne."
+          data-image="laptops/lonovoideapad-removebg-preview.png"
+          data-carousel-images="laptops/lonovoideapad-removebg-preview.png,laptops/lenovoideapadslim.png,laptops/Lenovo_Ideapad_Slim_3_Intel_Core_I5_13420H_16GB_1tb_SSD_Windows_11_Pro_15_3__Taşınabilir_Bilgisayar_83K1003MTR_-_1_TB_-_16_GB-removebg-preview.png">
+          <div class="product-number">2</div>
+          <div class="product-image"><img src="laptops/lonovoideapad-removebg-preview.png"
+              alt="Lenovo IdeaPad Slim 3" /></div>
+          <div class="product-body">
+            <h3>Lenovo IdeaPad Slim 3</h3>
+            <p>Intel Core 5 120U • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">59000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="macbook budget" data-name="MacBook Air 13" data-price="33000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 @ 1,80 GHz|Mémoire Vive (RAM) : 4 Go 1600 MHz DDR3|Stockage : 128 Go SSD (ou 256 Go SSD selon option)|Carte Graphique (GPU) : Intel® HD Graphics 4000 (1536 Mo)|Écran : 13,3&quot; LED HD|Système : macOS Mojave (Version 10.14.6)|Batterie : Bonne autonomie|Accessoires inclus : Chargeur d'origine MagSafe"
+          data-description="Ordinateur portable ultra-fin, léger et élégant, idéal pour la bureautique, la navigation web, les cours et l'utilisation au quotidien."
+          data-image="laptops/macbookair2012-removebg-preview.png"
+          data-carousel-images="laptops/macbookair2012-removebg-preview.png,laptops/Apple-MacBook-Air-13-Mid-2012-Specs-removebg-preview.png,laptops/macbook2012air-removebg-preview.png">
+          <div class="product-number">3</div>
+          <div class="product-image"><img src="laptops/macbookair2012-removebg-preview.png" alt="MacBook Air 13" />
+          </div>
+          <div class="product-body">
+            <h3>MacBook Air 13</h3>
+            <p>Intel Core i5 • 4 Go RAM • 128 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">33000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="macbook pro" data-name="Apple MacBook Pro 13&quot; (2020)"
+          data-price="65000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 quatre cœurs @ 1,4 GHz|Mémoire Vive (RAM) : 16 Go 2133 MHz LPDDR3|Stockage : 256 Go SSD (ou 512 Go SSD selon option)|Carte Graphique (GPU) : Intel® Iris Plus Graphics 645 (1536 Mo)|Écran : 13,3&quot; Retina|Ports : 2x Ports Thunderbolt 3 (USB-C)|Système : macOS Sequoia (Version 15.1)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine USB-C"
+          data-description="Ordinateur portable professionnel puissant, performant et élégant, idéal pour le développement, la création de contenu, la bureautique avancée et les études."
+          data-image="laptops/Apple_MacBook_Pro_13_inch_2020_Space_Gray_1000_0001-removebg-preview.png"
+          data-carousel-images="laptops/Apple_MacBook_Pro_13_inch_2020_Space_Gray_1000_0001-removebg-preview.png,laptops/macbookpro2019-removebg-preview.png,laptops/apple-macbook-air-2020-2-removebg-preview.png">
+          <div class="product-number">4</div>
+          <div class="product-image"><img
+              src="laptops/Apple_MacBook_Pro_13_inch_2020_Space_Gray_1000_0001-removebg-preview.png"
+              alt="Apple MacBook Pro 13&quot; (2020)" /></div>
+          <div class="product-body">
+            <h3>Apple MacBook Pro 13&quot; (2020)</h3>
+            <p>Intel Core i5 • 16 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">65000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro" data-name="Lenovo ThinkBook 14 / V14 (10ème Génération)"
+          data-price="69000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 (10ème Génération)|Mémoire Vive (RAM) : 8 Go|Stockage : 256 Go SSD NVMe|Carte Graphique (GPU) : Intel® UHD Graphics|Écran : 14&quot; Full HD|Système : Windows 11 (64 bits)|Batterie : Excellente autonomie (+5 Heures)|Couleur : Noir|Accessoires inclus : Chargeur d'origine"
+          data-description="Ordinateur portable professionnel, compact et performant, idéal pour la bureautique, les études et le travail au quotidien."
+          data-image="laptops/11-removebg-preview.png"
+          data-carousel-images="laptops/11-removebg-preview.png,laptops/lenovo111-removebg-preview.png,laptops/111-removebg-preview.png">
+          <div class="product-number">5</div>
+          <div class="product-image"><img src="laptops/11-removebg-preview.png"
+              alt="Lenovo ThinkBook 14 / V14 (10ème Génération)" /></div>
+          <div class="product-body">
+            <h3>Lenovo ThinkBook 14 / V14 (10ème Génération)</h3>
+            <p>Intel Core i5 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">69000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro budget" data-name="HP EliteBook 745 G6 (AMD Ryzen 5)"
+          data-price="62000 DA"
+          data-specs="Processeur (CPU) : AMD Ryzen™ 5 3500U (jusqu'à 3.70 GHz)|Mémoire Vive (RAM) : 8 Go DDR4|Stockage : 256 Go SSD NVMe|Carte Graphique (GPU) : AMD Radeon™ Vega 8 Graphics|Écran : 14&quot; Full HD Anti-réfléchissant|Système : Windows 11 Professionnel (64 bits)|Batterie : Excellente autonomie (+4 Heures)|Capteur d'empreinte digitale : Touch ID intégré|Accessoires inclus : Chargeur d'origine HP"
+          data-description="Ordinateur portable professionnel haut de gamme, robuste, élégant et performant, idéal pour la bureautique avancée, le multitâche, les études et la mobilité."
+          data-image="laptops/hpeb3333-removebg-preview.png"
+          data-carousel-images="laptops/hpeb3333-removebg-preview.png,laptops/hpeb33333-removebg-preview.png,laptops/hpeb222-removebg-preview.png">
+          <div class="product-number">6</div>
+          <div class="product-image"><img src="laptops/hpeb3333-removebg-preview.png"
+              alt="HP EliteBook 745 G6 (AMD Ryzen 5)" /></div>
+          <div class="product-body">
+            <h3>HP EliteBook 745 G6 (AMD Ryzen 5)</h3>
+            <p>AMD Ryzen 5 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">62000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro budget" data-name="ASUS ExpertBook P2 (P2451FA)"
+          data-price="58000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i3-10110U (10ème Génération)|Mémoire Vive (RAM) : 8 Go DDR4|Stockage : 256 Go SSD NVMe|Carte Graphique (GPU) : Intel® UHD Graphics|Écran : 14&quot; Full HD (avec logo ASUS ExpertBook au bas du cadre)|Sécurité : Capteur d'empreinte digitale (Touch ID) intégré|Système : Windows 10 / Windows 11 (64 bits)|Batterie : Excellente autonomie (+6 Heures)|Accessoires inclus : Chargeur d'origine ASUS"
+          data-description="Ordinateur portable professionnel léger, fiable et robuste, idéal pour la bureautique, les études et une utilisation quotidienne fluide."
+          data-image="laptops/asus01.png"
+          data-carousel-images="laptops/asus01.png,laptops/asus02.png,laptops/asus03.png">
+          <div class="product-number">7</div>
+          <div class="product-image"><img src="laptops/asus01.png" alt="ASUS ExpertBook P2 (P2451FA)" /></div>
+          <div class="product-body">
+            <h3>ASUS ExpertBook P2</h3>
+            <p>Intel Core i3 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">58000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro"
+          data-name="Dell Latitude 7410 (Carbon Edition - 10ème Génération)" data-price="65000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 (10ème Génération)|Mémoire Vive (RAM) : 8 Go DDR4|Stockage : 256 Go SSD NVMe|Carte Graphique (GPU) : Intel® UHD Graphics|Écran : 14&quot; Full HD Anti-réfléchissant|Finition : Carbon Fiber Edition|Système : Windows 10 / Windows 11 Professionnel (64 bits)|Batterie : Excellente autonomie|Couleur : Gris|Accessoires inclus : Chargeur d'origine Dell"
+          data-description="Ordinateur portable professionnel haut de gamme avec finition en fibre de carbone, ultra-résistant, léger et performant, idéal pour le travail, la création, les études et la mobilité."
+          data-image="laptops/Dell-Latitude01-removebg-preview.png"
+          data-carousel-images="laptops/Dell-Latitude01-removebg-preview.png,laptops/delllatitude02-removebg-preview.png,laptops/Dell-Latitude03-removebg-preview.png">
+          <div class="product-number">8</div>
+          <div class="product-image"><img src="laptops/Dell-Latitude01-removebg-preview.png"
+              alt="Dell Latitude 7410 (Carbon Edition - 10ème Génération)" /></div>
+          <div class="product-body">
+            <h3>Dell Latitude 7410 (Carbon Edition)</h3>
+            <p>Intel Core i5 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">65000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="macbook budget"
+          data-name="Apple MacBook Air 13&quot; Retina (2019)" data-price="55000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 double cœur @ 1,6 GHz|Mémoire Vive (RAM) : 8 Go 2133 MHz LPDDR3|Stockage : 128 Go SSD (ou 256 Go SSD selon option)|Carte Graphique (GPU) : Intel® UHD Graphics 617 (1536 Mo)|Écran : 13,3&quot; Retina|Système : macOS Sonoma (Version 14.7.1)|Batterie : Excellente autonomie|Couleur : Golden Pink|Accessoires inclus : Chargeur d'origine USB-C"
+          data-description="Ordinateur portable ultra-fin, léger et élégant avec écran Retina, idéal pour la bureautique, la création, les études et la mobilité."
+          data-image="laptops/macbook-air-13-retina-dorado-2019-reacondicionado-removebg-preview.png"
+          data-carousel-images="laptops/macbook-air-13-retina-dorado-2019-reacondicionado-removebg-preview.png,laptops/macbook2019-removebg-preview.png,laptops/61msxrTgRXL._AC_UF350_350_QL80_-removebg-preview.png">
+          <div class="product-number">9</div>
+          <div class="product-image"><img
+              src="laptops/macbook-air-13-retina-dorado-2019-reacondicionado-removebg-preview.png"
+              alt="Apple MacBook Air 13&quot; Retina (2019)" /></div>
+          <div class="product-body">
+            <h3>Apple MacBook Air 13" Retina</h3>
+            <p>Intel Core i5 • 8 Go RAM • 128 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">55000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro" data-name="Dell Latitude 15.6&quot; (13ème Génération)"
+          data-price="110000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 (13ème Génération)|Mémoire Vive (RAM) : 8 Go|Stockage : 256 Go SSD NVMe|Carte Graphique (GPU) : Intel® Iris® Xe Graphics / UHD Graphics|Écran : 15,6&quot; Full HD Anti-reflets|Clavier : AZERTY avec pavé numérique intégré|Système : Windows 11 Professionnel (64 bits)|Batterie : Excellente autonomie (+6 Heures)|Accessoires inclus : Chargeur d'origine Dell"
+          data-description="Ordinateur portable professionnel récent, puissant et confortable avec grand écran anti-reflet, idéal pour le travail intensif, le développement, la création et la bureautique avancée."
+          data-image="laptops/delllatitude335-removebg-preview.png"
+          data-carousel-images="laptops/delllatitude335-removebg-preview.png,laptops/pc-portable-dell-latitude-3540-i5-1335u-de-13e-gen-mx550-2g-8-go-512-go-ssd-removebg-preview.png,laptops/Dell-Latitude-3340-8-removebg-preview.png">
+          <div class="product-number">10</div>
+          <div class="product-image"><img src="laptops/delllatitude335-removebg-preview.png"
+              alt="Dell Latitude 15.6&quot; (13ème Génération)" /></div>
+          <div class="product-body">
+            <h3>Dell Latitude 15.6" (13e Gén)</h3>
+            <p>Intel Core i5 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">110000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro"
+          data-name="Acer Chromebook 14&quot; Tactile (11ème Génération)" data-price="65000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 (11ème Génération)|Mémoire Vive (RAM) : 8 Go|Stockage : 256 Go SSD|Carte Graphique (GPU) : Intel® Iris® Xe Graphics|Écran : 14&quot; Full HD (1080p) Tactile|Système : ChromeOS|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine Acer"
+          data-description="Ordinateur portable ultra-polyvalent avec écran tactile, rapide, fluide et efficace, idéal pour la navigation, les études, la création et le travail en mobilité."
+          data-image="laptops/aserchromebook01.png"
+          data-carousel-images="laptops/aserchromebook01.png,laptops/aserchromebook02.png,laptops/aserchromebook03.png">
+          <div class="product-number">11</div>
+          <div class="product-image"><img src="laptops/aserchromebook01.png"
+              alt="Acer Chromebook 14&quot; Tactile (11ème Génération)" /></div>
+          <div class="product-body">
+            <h3>Acer Chromebook 14" Tactile</h3>
+            <p>Intel Core i5 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">65000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro"
+          data-name="Dell Latitude 14&quot; (Intel Core i7 8ème Génération)" data-price="65000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i7 vPro (8ème Génération)|Mémoire Vive (RAM) : 8 Go DDR4|Stockage : 256 Go SSD|Carte Graphique (GPU) : Intel® UHD Graphics 620|Écran : 14&quot; Full HD Anti-reflets|Système : Windows 11 Professionnel (64 bits)|Batterie : Excellente autonomie (+4 Heures)|Accessoires inclus : Chargeur d'origine Dell"
+          data-description="Ordinateur portable professionnel performant, robuste et fiable, idéal pour la bureautique avancée, le multitâche, les études et le travail au quotidien."
+          data-image="laptops/dellvpro01.png"
+          data-carousel-images="laptops/dellvpro01.png,laptops/dellvpro02.png,laptops/dellvpro03.png">
+          <div class="product-number">12</div>
+          <div class="product-image"><img src="laptops/dellvpro01.png"
+              alt="Dell Latitude 14&quot; (Intel Core i7 8ème Génération)" /></div>
+          <div class="product-body">
+            <h3>Dell Latitude 14" (Core i7)</h3>
+            <p>Intel Core i7 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">65000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="macbook pro"
+          data-name="Apple MacBook Pro 15.6&quot; / 16&quot; (2019 - Intel Core i9)" data-price="118000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i9 (9ème Génération - 8 cœurs)|Mémoire Vive (RAM) : 16 Go DDR4|Stockage : 512 Go SSD High-Speed|Carte Graphique (GPU) : AMD Radeon Pro / Intel® UHD Graphics 630|Écran : 15,6&quot; / 16&quot; Retina (Résolution 2K)|Fonctionnalités : Touch Bar (Barre tactile) &amp; Touch ID|Système : macOS|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine USB-C"
+          data-description="Ordinateur portable professionnel ultra-puissant, idéal pour le montage vidéo 4K, le développement, la création graphique avancée et le travail intensif."
+          data-image="laptops/macbook19.01.png"
+          data-carousel-images="laptops/macbook19.01.png,laptops/macbook19.02.png,laptops/macbook19.03.png">
+          <div class="product-number">13</div>
+          <div class="product-image"><img src="laptops/macbook19.01.png"
+              alt="Apple MacBook Pro 15.6&quot; / 16&quot; (2019 - Intel Core i9)" /></div>
+          <div class="product-body">
+            <h3>Apple MacBook Pro 16" (Core i9)</h3>
+            <p>Intel Core i9 • 16 Go RAM • 512 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">118000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="gaming pro" data-name="Lenovo Legion 15.6&quot; Gaming"
+          data-price="64000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 / i7 High Performance|Mémoire Vive (RAM) : 8 Go DDR4|Stockage : 256 Go SSD NVMe High-Speed|Carte Graphique (GPU) : NVIDIA® GeForce® GTX / RTX Graphics|Écran : 15,6&quot; Full HD Anti-reflets|Clavier : Rétroéclairé rouge avec pavé numérique|Système : Windows 11 (64 bits)|Batterie : Bonne autonomie|Accessoires inclus : Chargeur d'origine Lenovo Legion"
+          data-description="Ordinateur portable gamer puissant et élégant, conçu pour le jeu vidéo, le montage vidéo, la création 3D et les travaux intensifs."
+          data-image="laptops/legion01.png"
+          data-carousel-images="laptops/legion01.png,laptops/legion02.png,laptops/legion03.png">
+          <div class="product-number">14</div>
+          <div class="product-image"><img src="laptops/legion01.png" alt="Lenovo Legion 15.6&quot; Gaming" /></div>
+          <div class="product-body">
+            <h3>Lenovo Legion 15.6" Gaming</h3>
+            <p>Intel Core i5/i7 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">55000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro" data-name="Dell Latitude 14&quot; (13ème Génération)"
+          data-price="99000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5 (13ème Génération)|Mémoire Vive (RAM) : 8 Go|Stockage : 256 Go SSD NVMe|Carte Graphique (GPU) : Intel® Iris® Xe Graphics / UHD Graphics|Écran : 14&quot; Full HD Anti-reflets|Système : Windows 11 Professionnel (64 bits)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine Dell"
+          data-description="Ordinateur portable professionnel récent, compact, puissant et réactif, idéal pour le travail exigeant, la programmation, les études et la mobilité."
+          data-image="laptops/dell-13gen1.png"
+          data-carousel-images="laptops/dell-13gen1.png,laptops/dell-13gen2.png,laptops/dell-13gen3.png">
+          <div class="product-number">15</div>
+          <div class="product-image"><img src="laptops/dell-13gen1.png"
+              alt="Dell Latitude 14&quot; (13ème Génération)" /></div>
+          <div class="product-body">
+            <h3>Dell Latitude 14" (13e Gén)</h3>
+            <p>Intel Core i5 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">99000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro gaming"
+          data-name="ASUS ZenBook (Intel Core i7 8ème Génération - ScreenPad)" data-price="130000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i7 (8ème Génération)|Mémoire Vive (RAM) : 8 Go|Stockage : 256 Go SSD High-Speed|Double Carte Graphique (GPU) : Intel® UHD Graphics + NVIDIA® GeForce® GTX 1050 Max-Q|Fonctionnalité Spéciale : ScreenPad™ (Pavé tactile interactif avec écran secondaire)|Écran : Full HD NanoEdge bord à bord|Système : Windows 11 (64 bits)|Batterie : Excellente autonomie (+5 Heures)|Accessoires inclus : Chargeur d'origine ASUS"
+          data-description="Ordinateur portable haut de gamme, puissant et innovant avec pavé tactile ScreenPad (double écran), idéal pour la création de contenu, le montage vidéo, le design et le travail en mobilité."
+          data-image="laptops/asuszenbook1.png"
+          data-carousel-images="laptops/asuszenbook1.png,laptops/asuszenbook2.png,laptops/asuszenbook3.png">
+          <div class="product-number">16</div>
+          <div class="product-image"><img src="laptops/asuszenbook1.png"
+              alt="ASUS ZenBook (Intel Core i7 8ème Génération - ScreenPad)" /></div>
+          <div class="product-body">
+            <h3>ASUS ZenBook (Core i7 ScreenPad)</h3>
+            <p>Intel Core i7 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">130000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pro" data-name="Lenovo V15-ADA (AMD Ryzen 5)" data-price="56500 DA"
+          data-specs="Processeur (CPU) : AMD Ryzen™ 5 3500U @ 2,10 GHz (Boost jusqu'à 3.70 GHz)|Mémoire Vive (RAM) : 8 Go DDR4|Stockage : 256 Go SSD NVMe|Carte Graphique (GPU) : AMD Radeon™ Vega 8 Graphics|Écran : 15,6&quot; Full HD Anti-reflets|Clavier : AZERTY avec pavé numérique intégré|Système : Windows 11 (64 bits)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine Lenovo"
+          data-description="Ordinateur portable fluide, réactif et polyvalent avec grand écran et pavé numérique, idéal pour la bureautique avancée, le multitâche, les études et l'usage quotidien."
+          data-image="laptops/lenovov1.png"
+          data-carousel-images="laptops/lenovov1.png,laptops/lenovov2.png,laptops/lenovov3.png">
+          <div class="product-number">17</div>
+          <div class="product-image"><img src="laptops/lenovov1.png" alt="Lenovo V15-ADA (AMD Ryzen 5)" /></div>
+          <div class="product-body">
+            <h3>Lenovo V15-ADA (AMD Ryzen 5)</h3>
+            <p>AMD Ryzen 5 • 8 Go RAM • 256 Go SSD</p>
+            <div class="product-meta">
+              <span class="product-price">56500 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="gaming pro"
+          data-name="Acer Nitro 5 / V15 Gaming (Intel Core i7 13ème Génération - RTX 4050)" data-price="165000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i7-13620H (13ème Génération - Haute Performance)|Mémoire Vive (RAM) : 16 Go DDR5 (5200 MT/s) High-Speed|Stockage : 1,5 To SSD NVMe (1 To + 512 Go SSD NVMe)|Carte Graphique (GPU) : NVIDIA® GeForce RTX™ 4050 (6 Go GDDR6 VRAM)|Écran : Full HD (1080p) avec taux de rafraîchissement ultra-fluide de 165 Hz|Système : Windows 11 (64 bits)|État : 10/10 (État impeccable / Quasi neuf)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine Acer Nitro"
+          data-description="Ordinateur portable gamer haute performance, conçu pour les jeux vidéo exigeants (titres AAA), le montage vidéo 4K, le rendu 3D et le développement intensif."
+          data-image="laptops/asernitro1.png"
+          data-carousel-images="laptops/asernitro1.png,laptops/asernitro2.png,laptops/asernitro3.png">
+          <div class="product-number">18</div>
+          <div class="product-image"><img src="laptops/asernitro1.png" alt="Acer Nitro 5 / V15 Gaming" /></div>
+          <div class="product-body">
+            <h3>Acer Nitro 5 / V15 Gaming</h3>
+            <p>Intel Core i7 13e Gén • 16 Go RAM • 1.5 To SSD</p>
+            <div class="product-meta">
+              <span class="product-price">165000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="gaming pro"
+          data-name="ASUS ROG Flow Z13 (GZ301ZE - Intel Core i9 12ème Génération)" data-price="145000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i9-12900H (12ème Génération - 14 cœurs / 20 threads @ 2.50 GHz)|Mémoire Vive (RAM) : 16 Go LPDDR5 High-Speed (5200 MT/s)|Stockage : 1 To SSD NVMe High-Speed|Carte Graphique (GPU) : NVIDIA® GeForce RTX™ 3050 Ti (4 Go GDDR6) + Intel® Iris® Xe Graphics|Écran : 13,4&quot; Tactile (10 points de contact, compatible stylet)|Format : PC Gamer Hybride / Tablette tactile avec clavier détachable|Système : Windows 11 Famille (64 bits)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine ASUS ROG USB-C"
+          data-description="PC portable gaming 2-en-1 hybride ultra-puissant et compact avec écran tactile, idéal pour le jeu vidéo, le montage vidéo 4K, la création 3D et la mobilité extrême."
+          data-image="laptops/asusrog.png"
+          data-carousel-images="laptops/asusrog.png,laptops/asusrog.png,laptops/asusrog1.png">
+          <div class="product-number">19</div>
+          <div class="product-image"><img src="laptops/asusrog.png"
+              alt="ASUS ROG Flow Z13 (GZ301ZE - Intel Core i9 12ème Génération)" /></div>
+          <div class="product-body">
+            <h3>ASUS ROG Flow Z13 (i9 12e Gén)</h3>
+            <p>Intel Core i9 12e Gén • 16 Go RAM • 1 To SSD</p>
+            <div class="product-meta">
+              <span class="product-price">145000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="gaming pro"
+          data-name="MSI Cyborg 15 A12V (Intel Core i5 12ème Génération)" data-price="250000 DA"
+          data-specs="Processeur (CPU) : Intel® Core™ i5-12450H (12ème Génération - 8 cœurs / 12 threads)|Mémoire Vive (RAM) : 32 Go DDR5 High-Speed|Stockage : 2 To SSD NVMe PCIe Gen4 High-Speed|Carte Graphique (GPU) : NVIDIA® GeForce RTX™ 4050 (6 Go GDDR6) / RTX™ 4060 (8 Go GDDR6)|Écran : 15,6&quot; Full HD (1080p) IPS 144 Hz (Ultra-fluide)|Design &amp; Clavier : Boîtier Translucent Black &amp; Clavier rétroéclairé bleu translucide (Cooler Boost)|Système : Windows 11 (64 bits)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine MSI"
+          data-description="PC portable gamer moderne au design futuriste (châssis translucide &quot;Cyberpunk&quot;), léger, fluide et ultra-performant avec mémoire DDR5 haute vitesse, idéal pour le gaming, le montage vidéo, le rendu 3D et le développement."
+          data-image="laptops/msicy1.png"
+          data-carousel-images="laptops/msicy1.png,laptops/msicy.png,laptops/msicy2.png">
+          <div class="product-number">20</div>
+          <div class="product-image"><img src="laptops/msicy1.png"
+              alt="MSI Cyborg 15 A12V (Intel Core i5 12ème Génération)" /></div>
+          <div class="product-body">
+            <h3>MSI Cyborg 15 A12V (i5 12e Gén)</h3>
+            <p>Intel Core i5 12e Gén • 32 Go RAM • 2 To SSD</p>
+            <div class="product-meta">
+              <span class="product-price">250000 DA</span>
+              <div class="product-actions">
+                <button class="btn btn-secondary small-btn btn-details">Détails</button>
+                <button class="btn btn-primary small-btn btn-commander">Commander</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--paper);border-top:1px solid var(--line-soft);">
+    <div class="inner" style="padding:36px 0;text-align:center;">
+      <div style="font-weight:700;font-size:13px;margin-bottom:18px;">Contact Us</div>
+      <div style="display:flex;gap:20px;justify-content:center;align-items:center;margin-bottom:18px;">
+        <a href="https://www.instagram.com/dragontecstore/"
+          style="text-decoration:none;color:var(--ink-soft);font-size:14px;font-weight:600;">
+          Instagram
+        </a>
+        <a href="#" style="text-decoration:none;color:var(--ink-soft);font-size:14px;font-weight:600;">
+          WhatsApp
+        </a>
+        <a href="#" style="text-decoration:none;color:var(--ink-soft);font-size:14px;font-weight:600;">
+          Facebook
+        </a>
+      </div>
+      <div style="border-top:1px solid var(--line-soft);padding-top:18px;font-size:12px;color:var(--ink-faint);">
+        © 2026 DRAGON TEC. All rights reserved.
+      </div>
+      <div style="margin-top:12px;font-size:11px;color:var(--ink-faint);">
+        <a href="https://www.flaticon.com/free-icons/smart-cart" title="smart cart icons"
+          style="color:var(--ink-faint);text-decoration:none;">Smart cart icons created by Magnific - Flaticon</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="product-modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Close">×</button>
+      <div class="modal-visual">
+        <div class="carousel-wrapper">
+          <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">‹</button>
+          <div class="modal-carousel">
+            <div class="carousel-slide">
+              <img src="laptops/legion01.png" alt="Laptop preview 1" />
+            </div>
+            <div class="carousel-slide">
+              <img src="laptops/legion02.png" alt="Laptop preview 2" />
+            </div>
+            <div class="carousel-slide">
+              <img src="laptops/legion03.png" alt="Laptop preview 3" />
+            </div>
+          </div>
+          <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">›</button>
+        </div>
+        <div class="carousel-indicators">
+          <div class="carousel-dot active" data-index="0"></div>
+          <div class="carousel-dot" data-index="1"></div>
+          <div class="carousel-dot" data-index="2"></div>
+        </div>
+        <span id="modalRank" class="modal-rank">1</span>
+      </div>
+      <div class="modal-content-box">
+        <h3 id="modalTitle">Dragon X1 Pro</h3>
+        <p id="modalDescription">Ordinateur portable premium conçu pour le travail, la création et une autonomie élevée.
+        </p>
+        <ul id="modalSpecs"></ul>
+        <div class="modal-footer">
+          <span id="modalPrice"></span>
+          <button class="btn btn-primary btn-commander">Commander</button>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- CATEGORIES -->
-<section style="background:var(--paper);">
-  <div class="inner">
-    <span class="tag">6 shown — links to full category page</span>
-    <div class="row-between"><h2 class="h2">Shop by laptop type</h2></div>
-    <div class="grid g6">
-      <div class="card" style="text-align:center;"><div class="ph" style="height:60px;width:60px;border-radius:50%;margin:0 auto 10px;"></div><div style="font-size:12.5px;">Ultrabooks</div></div>
-      <div class="card" style="text-align:center;"><div class="ph" style="height:60px;width:60px;border-radius:50%;margin:0 auto 10px;"></div><div style="font-size:12.5px;">Gaming</div></div>
-      <div class="card" style="text-align:center;"><div class="ph" style="height:60px;width:60px;border-radius:50%;margin:0 auto 10px;"></div><div style="font-size:12.5px;">Business</div></div>
-      <div class="card" style="text-align:center;"><div class="ph" style="height:60px;width:60px;border-radius:50%;margin:0 auto 10px;"></div><div style="font-size:12.5px;">Creator</div></div>
-      <div class="card" style="text-align:center;"><div class="ph" style="height:60px;width:60px;border-radius:50%;margin:0 auto 10px;"></div><div style="font-size:12.5px;">2-in-1</div></div>
-      <div class="card" style="text-align:center;"><div class="ph" style="height:60px;width:60px;border-radius:50%;margin:0 auto 10px;"></div><div style="font-size:12.5px;">Workstations</div></div>
-    </div>
-  </div>
-</section>
+  <!-- CHECKOUT OVERLAY -->
+  <div class="checkout-overlay" id="checkoutOverlay" aria-hidden="true">
+    <div class="checkout-backdrop" id="checkoutBackdrop"></div>
+    <div class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutHeading">
+      <button class="checkout-close" type="button" id="checkoutClose" aria-label="Fermer la commande">&times;</button>
 
-<!-- FEATURED PRODUCTS -->
-<section style="background:var(--wash);">
-  <div class="inner">
-    <span class="tag">Pulled from best-seller data</span>
-    <div class="row-between">
-      <h2 class="h2">Featured laptops</h2>
-      <a class="link" href="#">View all</a>
-    </div>
-
-    <div class="product-showcase">
-      <article class="product-card" data-name="Tilted Blade Stealth" data-price="$1,999" data-specs="Processeur (CPU) : Intel® Core™ i7-8565U @ 1.80GHz (jusqu'à 2.00 GHz)|Mémoire Vive (RAM) : 8 Go|Stockage : 256 Go SSD (LITEON CV8-8E256)|Carte Graphique (GPU) : Intel® UHD Graphics 620|Système : Architecture 64 bits|Batterie : Excellente autonomie|Accessoires inclus : chargeur d'origine" data-description="Ordinateur portable premium conçu pour le travail, la création et une autonomie élevée." data-badge="Best Seller" data-image="laptops/blade-stealth-13-2019-2.png" data-carousel-images="laptops/blade-stealth-13-2019-2.png,laptops/blade-stealth3.png,laptops/blade_stealth-removebg-preview.png">
-        <div class="product-number">1</div>
-        <div class="product-image"><img src="laptops/blade-stealth-13-2019-2.png" alt="Tilted Blade Stealth" /></div>
-        <div class="product-body">
-          <h3>Tilted Blade Stealth</h3>
-          <p>Intel Core i7 • 8 Go RAM • 256 Go SSD</p>
-          <div class="product-meta">
-            <span class="product-price">$1,999</span>
-            <button class="btn btn-secondary small-btn">View details</button>
+      <div class="checkout-scroll">
+        <!-- PRODUCT SUMMARY -->
+        <div class="checkout-product-summary">
+          <div class="checkout-product-img-wrap">
+            <img src="" alt="" id="checkoutProductImg" class="checkout-product-img" />
+          </div>
+          <div class="checkout-product-info">
+            <h2 id="checkoutHeading" class="checkout-product-name"></h2>
+            <div class="checkout-product-price" id="checkoutProductPrice"></div>
           </div>
         </div>
-      </article>
 
-      <article class="product-card" data-name="Lenovo IdeaPad Slim 3" data-price="62000 DA" data-specs="Processeur (CPU) : Intel® Core™ 5 120U @ 1.40 GHz|Mémoire Vive (RAM) : 16 Go|Stockage : SSD High-Speed (ex. 256 Go / 512 Go SSD NVMe)|Carte Graphique (GPU) : Intel® Graphics|Écran : 14&quot; Tactile (Prise en charge du tactile à 10 points de contact)|Système : Windows 10 Enterprise LTSC (Architecture 64 bits)|Batterie : Excellente autonomie|Accessoires inclus : Chargeur d'origine" data-description="Ordinateur portable ultra-mince conçu pour la mobilité, le travail professionnel et la productivité quotidienne." data-badge="Premium" data-image="laptops/lonovoideapad-removebg-preview.png" data-carousel-images="laptops/lonovoideapad-removebg-preview.png,laptops/lenovoideapadslim.png,laptops/Lenovo_Ideapad_Slim_3_Intel_Core_I5_13420H_16GB_1tb_SSD_Windows_11_Pro_15_3__Taşınabilir_Bilgisayar_83K1003MTR_-_1_TB_-_16_GB-removebg-preview.png">
-        <div class="product-number">2</div>
-        <div class="product-image"><img src="laptops/lonovoideapad-removebg-preview.png" alt="Lenovo IdeaPad Slim 3" /></div>
-        <div class="product-body">
-          <h3>Lenovo IdeaPad Slim 3</h3>
-          <p>Intel Core 5 120U • 16 Go RAM • 256/512 Go SSD</p>
-          <div class="product-meta">
-            <span class="product-price">62000 DA</span>
-            <button class="btn btn-secondary small-btn">View details</button>
+        <form id="checkoutForm" novalidate autocomplete="on">
+          <!-- PERSONAL INFO -->
+          <fieldset class="checkout-fieldset">
+            <legend class="checkout-legend">Informations personnelles</legend>
+
+            <div class="checkout-form-row">
+              <div class="checkout-field">
+                <label for="checkoutNom" class="checkout-label">Nom <span class="checkout-required">*</span></label>
+                <input type="text" id="checkoutNom" name="nom" class="checkout-input" placeholder="Votre nom" required
+                  autocomplete="family-name" />
+                <span class="checkout-error" id="errorNom"></span>
+              </div>
+              <div class="checkout-field">
+                <label for="checkoutPrenom" class="checkout-label">Prénom <span
+                    class="checkout-required">*</span></label>
+                <input type="text" id="checkoutPrenom" name="prenom" class="checkout-input" placeholder="Votre prénom"
+                  required autocomplete="given-name" />
+                <span class="checkout-error" id="errorPrenom"></span>
+              </div>
+            </div>
+
+            <div class="checkout-form-row">
+              <div class="checkout-field">
+                <label for="checkoutTel" class="checkout-label">Numéro de téléphone <span
+                    class="checkout-required">*</span></label>
+                <input type="tel" id="checkoutTel" name="telephone" class="checkout-input"
+                  placeholder="Veuillez saisir votre numéro de téléphone." required autocomplete="tel" />
+                <span class="checkout-error" id="errorTel"></span>
+              </div>
+              <div class="checkout-field">
+                <label for="checkoutEmail" class="checkout-label">Adresse email <span
+                    class="checkout-required">*</span></label>
+                <input type="email" id="checkoutEmail" name="email" class="checkout-input"
+                  placeholder="exemple@email.com" required autocomplete="email" />
+                <span class="checkout-error" id="errorEmail"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ADDRESS -->
+          <fieldset class="checkout-fieldset">
+            <legend class="checkout-legend">Adresse de livraison</legend>
+
+            <div class="checkout-form-row">
+              <div class="checkout-field">
+                <label for="checkoutWilaya" class="checkout-label">Wilaya <span
+                    class="checkout-required">*</span></label>
+                <select id="checkoutWilaya" name="wilaya" class="checkout-input checkout-select" required>
+                  <option value="" disabled selected>Sélectionnez votre wilaya</option>
+                  <option value="01">01 - Adrar</option>
+                  <option value="02">02 - Chlef</option>
+                  <option value="03">03 - Laghouat</option>
+                  <option value="04">04 - Oum El Bouaghi</option>
+                  <option value="05">05 - Batna</option>
+                  <option value="06">06 - Béjaïa</option>
+                  <option value="07">07 - Biskra</option>
+                  <option value="08">08 - Béchar</option>
+                  <option value="09">09 - Blida</option>
+                  <option value="10">10 - Bouira</option>
+                  <option value="11">11 - Tamanrasset</option>
+                  <option value="12">12 - Tébessa</option>
+                  <option value="13">13 - Tlemcen</option>
+                  <option value="14">14 - Tiaret</option>
+                  <option value="15">15 - Tizi Ouzou</option>
+                  <option value="16">16 - Algiers</option>
+                  <option value="17">17 - Djelfa</option>
+                  <option value="18">18 - Jijel</option>
+                  <option value="19">19 - Sétif</option>
+                  <option value="20">20 - Saïda</option>
+                  <option value="21">21 - Skikda</option>
+                  <option value="22">22 - Sidi Bel Abbès</option>
+                  <option value="23">23 - Annaba</option>
+                  <option value="24">24 - Guelma</option>
+                  <option value="25">25 - Constantine</option>
+                  <option value="26">26 - Médéa</option>
+                  <option value="27">27 - Mostaganem</option>
+                  <option value="28">28 - M'Sila</option>
+                  <option value="29">29 - Mascara</option>
+                  <option value="30">30 - Ouargla</option>
+                  <option value="31">31 - Oran</option>
+                  <option value="32">32 - El Bayadh</option>
+                  <option value="33">33 - Illizi</option>
+                  <option value="34">34 - Bordj Bou Arréridj</option>
+                  <option value="35">35 - Boumerdès</option>
+                  <option value="36">36 - El Tarf</option>
+                  <option value="37">37 - Tindouf</option>
+                  <option value="38">38 - Tissemsilt</option>
+                  <option value="39">39 - El Oued</option>
+                  <option value="40">40 - Khenchela</option>
+                  <option value="41">41 - Souk Ahras</option>
+                  <option value="42">42 - Tipaza</option>
+                  <option value="43">43 - Mila</option>
+                  <option value="44">44 - Aïn Defla</option>
+                  <option value="45">45 - Naâma</option>
+                  <option value="46">46 - Aïn Témouchent</option>
+                  <option value="47">47 - Ghardaïa</option>
+                  <option value="48">48 - Relizane</option>
+                  <option value="49">49 - Timimoun</option>
+                  <option value="50">50 - Bordj Badji Mokhtar</option>
+                  <option value="51">51 - Ouled Djellal</option>
+                  <option value="52">52 - Béni Abbès</option>
+                  <option value="53">53 - In Salah</option>
+                  <option value="54">54 - In Guezzam</option>
+                  <option value="55">55 - Touggourt</option>
+                  <option value="56">56 - Djanet</option>
+                  <option value="57">57 - El M'Ghair</option>
+                  <option value="58">58 - El Meniaa</option>
+                </select>
+                <span class="checkout-error" id="errorWilaya"></span>
+              </div>
+            </div>
+
+            <div class="checkout-form-row">
+              <div class="checkout-field checkout-field-full">
+                <label for="checkoutAdresse" class="checkout-label">Adresse complète <span
+                    class="checkout-required">*</span></label>
+                <input type="text" id="checkoutAdresse" name="adresse" class="checkout-input"
+                  placeholder="Adresse, rue, quartier..." required autocomplete="street-address" />
+                <span class="checkout-error" id="errorAdresse"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- DELIVERY METHOD -->
+          <fieldset class="checkout-fieldset">
+            <legend class="checkout-legend">Mode de livraison</legend>
+
+            <div class="checkout-delivery-options">
+              <label class="checkout-delivery-card" for="deliveryYalidine" id="deliveryCardYalidine">
+                <input type="radio" id="deliveryYalidine" name="delivery" value="500" class="checkout-delivery-radio" />
+                <div class="checkout-delivery-radio-circle"></div>
+                <div class="checkout-delivery-card-content">
+                  <div class="checkout-delivery-card-title">Bureau Yalidine</div>
+                  <div class="checkout-delivery-card-desc">Livraison au bureau Yalidine</div>
+                </div>
+                <div class="checkout-delivery-card-price">500 DA</div>
+              </label>
+
+              <label class="checkout-delivery-card" for="deliveryDomicile" id="deliveryCardDomicile">
+                <input type="radio" id="deliveryDomicile" name="delivery" value="800" class="checkout-delivery-radio" />
+                <div class="checkout-delivery-radio-circle"></div>
+                <div class="checkout-delivery-card-content">
+                  <div class="checkout-delivery-card-title">Livraison à domicile</div>
+                  <div class="checkout-delivery-card-desc">Livraison directement chez vous</div>
+                </div>
+                <div class="checkout-delivery-card-price">800 DA</div>
+              </label>
+            </div>
+            <span class="checkout-error" id="errorDelivery"></span>
+          </fieldset>
+        </form>
+
+        <!-- ORDER SUMMARY -->
+        <div class="checkout-summary">
+          <div class="checkout-summary-heading">Votre commande</div>
+          <div class="checkout-summary-row">
+            <span class="checkout-summary-label" id="summaryProductName"></span>
+            <span class="checkout-summary-value" id="summaryProductPrice"></span>
+          </div>
+          <div class="checkout-summary-row checkout-summary-row-delivery" id="summaryDeliveryRow" style="display:none;">
+            <span class="checkout-summary-label" id="summaryDeliveryLabel"></span>
+            <span class="checkout-summary-value" id="summaryDeliveryPrice"></span>
+          </div>
+          <div class="checkout-summary-divider"></div>
+          <div class="checkout-summary-row checkout-summary-total">
+            <span class="checkout-summary-label">TOTAL</span>
+            <span class="checkout-summary-value" id="summaryTotal"></span>
           </div>
         </div>
-      </article>
 
-      <article class="product-card" data-name="MacBook Air 13" data-price="33000 DA" data-specs="Processeur (CPU) : Intel® Core™ i5 @ 1,80 GHz|Mémoire Vive (RAM) : 4 Go 1600 MHz DDR3|Stockage : 128 Go SSD (ou 256 Go SSD selon option)|Carte Graphique (GPU) : Intel® HD Graphics 4000 (1536 Mo)|Écran : 13,3&quot; LED HD|Système : macOS Mojave (Version 10.14.6)|Batterie : Bonne autonomie|Accessoires inclus : Chargeur d'origine MagSafe" data-description="Ordinateur portable ultra-fin, léger et élégant, idéal pour la bureautique, la navigation web, les cours et l'utilisation au quotidien." data-badge="Featured" data-image="laptops/macbookair2012-removebg-preview.png" data-carousel-images="laptops/macbookair2012-removebg-preview.png,laptops/Apple-MacBook-Air-13-Mid-2012-Specs-removebg-preview.png,laptops/macbook2012air-removebg-preview.png">
-        <div class="product-number">3</div>
-        <div class="product-image"><img src="laptops/macbookair2012-removebg-preview.png" alt="MacBook Air 13" /></div>
-        <div class="product-body">
-          <h3>MacBook Air 13</h3>
-          <p>Intel Core i5 • 4 Go RAM • 128 Go SSD</p>
-          <div class="product-meta">
-            <span class="product-price">33000 DA</span>
-            <button class="btn btn-secondary small-btn">View details</button>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+        <!-- STATUS NOTIFICATION / ALERT CONTAINER -->
+        <div id="checkoutStatusAlert" class="checkout-status-alert" style="display:none;" role="alert"></div>
 
-<!-- DEAL BANNER -->
-<section class="sale-banner">
-  <div class="inner banner-inner">
-    <div>
-      <span class="tag promo-tag">Countdown updates live via JS</span>
-      <div class="sale-title">Flash sale — up to 40% off</div>
-    </div>
-    <div class="countdown-wrap">
-      <div class="countdown">
-        <div class="countdown-box"><span id="hours">12</span></div>
-        <div class="countdown-box"><span id="minutes">45</span></div>
-        <div class="countdown-box"><span id="seconds">09</span></div>
-      </div>
-      <button class="btn btn-light">Shop the sale</button>
-    </div>
-  </div>
-</section>
-
-<!-- BRAND STRIP -->
-<section style="background:var(--paper);">
-  <div class="inner">
-    <span class="tag">Optional — cut if brand list is short</span>
-    <div class="grid g6">
-      <div class="ph" style="height:44px;">Dell</div>
-      <div class="ph" style="height:44px;">ASUS</div>
-      <div class="ph" style="height:44px;">Lenovo</div>
-      <div class="ph" style="height:44px;">HP</div>
-      <div class="ph" style="height:44px;">MSI</div>
-      <div class="ph" style="height:44px;">Apple</div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section style="background:var(--wash);text-align:center;">
-  <div class="inner" style="max-width:520px;">
-    <span class="tag">Consider a discount-code incentive instead</span>
-    <div style="font-size:19px;font-weight:700;margin-bottom:6px;">Get deals in your inbox</div>
-    <div style="font-size:13px;color:var(--ink-soft);margin-bottom:16px;">New arrivals and price drops, once a week.</div>
-    <div style="display:flex;gap:8px;">
-      <div style="flex:1;border:1px solid var(--line);border-radius:6px;padding:10px 14px;color:var(--ink-faint);font-size:13px;text-align:left;">you@example.com</div>
-      <button class="btn btn-primary">Subscribe</button>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer style="background:var(--paper);border-top:1px solid var(--line-soft);">
-  <div class="inner" style="padding-top:36px;">
-    <span class="tag">Standard link groups + payment badges</span>
-    <div class="grid g4" style="margin-bottom:28px;">
-      <div>
-        <div style="font-weight:700;font-size:13px;margin-bottom:12px;">
-        <div style="font-weight:700;font-size:13px;margin-bottom:12px;">Shop</div>
-        <div style="font-size:12.5px;color:var(--ink-soft);line-height:2.2;">Ultrabooks<br>Gaming laptops<br>Business laptops<br>Deals</div>
-      </div>
-      <div>
-        <div style="font-weight:700;font-size:13px;margin-bottom:12px;">Support</div>
-        <div style="font-size:12.5px;color:var(--ink-soft);line-height:2.2;">Contact us<br>Shipping info<br>Returns<br>FAQ</div>
-      </div>
-      <div>
-        <div style="font-weight:700;font-size:13px;margin-bottom:12px;">Company</div>
-        <div style="font-size:12.5px;color:var(--ink-soft);line-height:2.2;">About<br>Careers<br>Press</div>
-      </div>
-      <div>
-        <div style="font-weight:700;font-size:13px;margin-bottom:12px;">Legal</div>
-        <div style="font-size:12.5px;color:var(--ink-soft);line-height:2.2;">Terms<br>Privacy<br>Warranty policy</div>
-      </div>
-    </div>
-    <div style="border-top:1px solid var(--line-soft);padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--ink-faint);">
-      <span>© 2026 Store name. All rights reserved.</span>
-      <div style="display:flex;gap:8px;">
-        <div class="ph" style="width:36px;height:22px;font-size:9px;border-radius:3px;">Visa</div>
-        <div class="ph" style="width:36px;height:22px;font-size:9px;border-radius:3px;">MC</div>
-        <div class="ph" style="width:36px;height:22px;font-size:9px;border-radius:3px;">PayPal</div>
+        <!-- CONFIRM BUTTON -->
+        <button type="button" class="checkout-confirm-btn" id="checkoutConfirmBtn" disabled>
+          <span class="btn-text">CONFIRMER LA COMMANDE</span>
+        </button>
       </div>
     </div>
   </div>
-</footer>
 
-<div class="product-modal" id="productModal" aria-hidden="true">
-  <div class="modal-backdrop" data-close="true"></div>
-  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" type="button" aria-label="Close">×</button>
-    <div class="modal-visual">
-      <div class="carousel-wrapper">
-        <button class="carousel-arrow carousel-arrow-left" aria-label="Previous image">‹</button>
-        <div class="modal-carousel">
-          <div class="carousel-slide">
-            <img src="laptops/blade-stealth-13-2019-2.png" alt="Laptop preview 1" />
-          </div>
-          <div class="carousel-slide">
-            <img src="laptops/blade-stealth3.png" alt="Laptop preview 2" />
-          </div>
-          <div class="carousel-slide">
-            <img src="laptops/blade_stealth-removebg-preview.png" alt="Laptop preview 3" />
-          </div>
-        </div>
-        <button class="carousel-arrow carousel-arrow-right" aria-label="Next image">›</button>
-      </div>
-      <div class="carousel-indicators">
-        <div class="carousel-dot active" data-index="0"></div>
-        <div class="carousel-dot" data-index="1"></div>
-        <div class="carousel-dot" data-index="2"></div>
-      </div>
-      <span id="modalBadge" class="modal-badge">Best Seller</span>
-    </div>
-    <div class="modal-content-box">
-      <div class="modal-tag" id="modalTag">Featured laptop</div>
-      <h3 id="modalTitle">Dragon X1 Pro</h3>
-      <p id="modalDescription">Ordinateur portable premium conçu pour le travail, la création et une autonomie élevée.</p>
-      <ul id="modalSpecs"></ul>
-      <div class="modal-footer">
-        <span id="modalPrice">$1,999</span>
-        <button class="btn btn-primary">Command</button>
-      </div>
-    </div>
-  </div>
-</div>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics-compat.js"></script>
+  <script src="firebase-config.js"></script>
 
-<script src="script.js"></script>
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+
+  <!-- Main Application Script -->
+  <script src="script.js"></script>
 </body>
+
 </html>

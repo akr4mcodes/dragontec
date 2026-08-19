@@ -1,0 +1,13 @@
+{
+  "name": "dragon-tec",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.4",
+    "@supabase/supabase-js": "^2.112.3",
+    "firebase": "^12.17.1"
+  }
+}
