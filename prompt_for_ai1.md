@@ -1,25 +1,49 @@
-Design a dark-themed hero section for the homepage of an electronics/tech-store
-e-commerce site, in React + Tailwind CSS.
+# 🐉 PROMPT IA — AJOUT D'UN NOUVEAU LAPTOP & SYNCHRONISATION BDD
 
-Layout & copy:
-- Full-viewport, near-black background with a subtle diagonal light-beam accent
-- Small uppercase eyebrow line above the headline
-- Large, bold display headline with the brand name
-- 3-4 line description paragraph in muted gray/white
-- A bold secondary line acting as a CTA header (e.g. "Buy now!")
-- ONE call-to-action button only — filled indigo/purple, cart icon + "Buy" label.
-  No secondary "More info" button.
+Copiez-collez le texte ci-dessous à l'IA avec les informations de votre nouveau laptop :
 
-Background:
-- Instead of a static hero image, use a looping, muted, autoplaying animated
-  background that reads as "live video" — but build it with CSS keyframes or a
-  <canvas> animation (drifting particles, slow light sweep) instead of an actual
-  <video src> element.
-- Because there's no real video file loading, there's no "Save video as" option
-  on right-click — the motion only exists as running code.
-- Block the context menu on the hero as a light extra deterrent.
+---
 
-If real video footage is used instead of a coded animation: note it can only be
-made harder to save, not impossible. Strip native controls, add
-controlsList="nodownload noremoteplayback", disablePictureInPicture, block
-right-click, and layer a transparent div over the video to catch clicks.
+```text
+Tu es l'assistant développeur du site e-commerce DragonTec Store.
+Ajoute le nouvel ordinateur portable ci-dessous au catalogue du site et synchronise les bases de données Firebase Firestore et Supabase.
+
+--- INFORMATIONS DU LAPTOP ---
+Nom : [Nom complet du laptop]
+Description : [Description détaillée du laptop]
+Prix : [Prix en DA, ex: 66 000 DA]
+Catégories : [pro / gaming / macbook / budget] (inclure 'budget' si prix < 65 000 DA)
+
+Spécifications :
+- Processeur (CPU) : [Modèle CPU, cœurs, fréquence]
+- Mémoire Vive (RAM) : [Capacité et type de RAM]
+- Stockage : [Capacité et type SSD]
+- Carte Graphique (GPU) : [Modèle GPU]
+- Écran : [Taille, résolution, technologie, fréquence]
+- Châssis / Audio : [Matériaux, caractéristiques audio]
+- Système : [OS préinstallé, ex: Windows 11 64 bits]
+- État : [ex: 10/10 (Très bon état)]
+- Batterie : [Autonomie estimée]
+- Garantie : [ex: 3 mois]
+- Accessoires inclus : [ex: Chargeur d'origine]
+
+Images (dossier laptops/) :
+1ère image : laptops/[image1].png (miniature principale & 1ère diapositive)
+2ème image : laptops/[image2].png (2ème diapositive carrousel)
+3ème image : laptops/[image3].png (3ème diapositive carrousel)
+
+--- ACTIONS TECHNIQUES À EFFECTUER AUTOMATIQUEMENT ---
+1. index.html :
+   - Insérer la nouvelle carte <article class="product-card"> à la fin de <div class="product-showcase"> avec le numéro d'article incrémenté.
+   - Renseigner tous les data-attributes : data-category, data-name, data-price, data-specs (séparateur |), data-description, data-image, data-carousel-images (séparateur virgule).
+   - Inclure les boutons "Détails" (btn-details) et "Commander" (btn-commander).
+
+2. supabase_schema.sql :
+   - Ajouter le produit dans la table public.products (slug unique, nom, prix, stock=5, image_url, category).
+
+3. script.js & firebase-config.js :
+   - Vérifier que lors d'un achat, les spécifications complètes, la description et l'image du produit sont bien enregistrées dans la collection 'orders' de Firebase Firestore et dans 'order_items' de Supabase.
+
+4. Tester et valider :
+   - S'assurer que le filtrage par catégorie, la recherche textuelle, le modal carrousel et le popup de commande fonctionnent sans erreur.
+```

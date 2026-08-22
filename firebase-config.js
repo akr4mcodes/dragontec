@@ -81,6 +81,9 @@ async function saveOrderToFirestore(orderData) {
     laptop_nom: orderData.productName || '',
     laptop_slug: orderData.productSlug || '',
     laptop_prix: orderData.productPrice || 0,
+    laptop_specs: orderData.productSpecs || '',
+    laptop_description: orderData.productDescription || '',
+    laptop_image: orderData.productImage || '',
     quantite: orderData.quantity || 1,
 
     // 4. Livraison & Tarifs

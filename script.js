@@ -147,8 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const price = parsePrice(priceText);
         const image = card.dataset.image || '';
         const id = toProductSlug(name);
+        const specs = card.dataset.specs || '';
+        const description = card.dataset.description || '';
 
-        openCheckout({ name, price, image, id });
+        openCheckout({ name, price, image, id, specs, description });
         return;
       }
 
@@ -221,6 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
       filterProducts();
     });
   });
+
+  // Initialiser le compteur de produits
+  filterProducts();
 
   const canvas = document.getElementById('heroCanvas');
   const heroSection = document.querySelector('.hero-section');
@@ -649,8 +654,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const firstSlideImg = document.querySelector('.carousel-slide img');
         const image = firstSlideImg ? firstSlideImg.src : '';
         const id = toProductSlug(name);
+        const description = modalDescription?.textContent || '';
+        const specs = Array.from(modalSpecs?.querySelectorAll('li') || []).map(li => li.textContent).join(' | ');
 
-        openCheckout({ name, price, image, id });
+        openCheckout({ name, price, image, id, specs, description });
         return;
       }
 
@@ -662,8 +669,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const price = parsePrice(priceText);
         const image = card.dataset.image || '';
         const id = toProductSlug(name);
+        const specs = card.dataset.specs || '';
+        const description = card.dataset.description || '';
 
-        openCheckout({ name, price, image, id });
+        openCheckout({ name, price, image, id, specs, description });
       }
     }
   });
@@ -915,6 +924,9 @@ document.addEventListener('DOMContentLoaded', () => {
       productSlug: currentCheckoutProduct.id,
       productName: currentCheckoutProduct.name,
       productPrice: subtotal,
+      productSpecs: currentCheckoutProduct.specs || '',
+      productDescription: currentCheckoutProduct.description || '',
+      productImage: currentCheckoutProduct.image || '',
       totalPrice: expectedTotal
     };
 

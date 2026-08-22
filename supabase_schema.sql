@@ -225,7 +225,7 @@ $$;
 GRANT EXECUTE ON FUNCTION public.submit_checkout_order TO anon, authenticated;
 
 -- ==============================================================================
--- 7. SEED DATA : LES 20 ORDINATEURS PORTABLES DU CATALOGUE DRAGONTEC
+-- 7. SEED DATA : LES 23 ORDINATEURS PORTABLES DU CATALOGUE DRAGONTEC
 -- ==============================================================================
 INSERT INTO public.products (slug, name, price, stock, image_url, category)
 VALUES
@@ -248,7 +248,10 @@ VALUES
 ('lenovo-v15-ada-amd-ryzen-5', 'Lenovo V15-ADA (AMD Ryzen 5)', 72000, 5, 'laptops/lenovov1.png', 'pro'),
 ('acer-nitro-5-v15-gaming-intel-core-i7-13eme-generation-rtx-4050', 'Acer Nitro 5 / V15 Gaming (Intel Core i7 13ème Génération - RTX 4050)', 165000, 5, 'laptops/asernitro1.png', 'gaming pro'),
 ('asus-rog-flow-z13-gz301ze-intel-core-i9-12eme-generation', 'ASUS ROG Flow Z13 (GZ301ZE - Intel Core i9 12ème Génération)', 145000, 5, 'laptops/asusrog.png', 'gaming pro'),
-('msi-cyborg-15-a12v-intel-core-i5-12eme-generation', 'MSI Cyborg 15 A12V (Intel Core i5 12ème Génération)', 250000, 5, 'laptops/msicy1.png', 'gaming pro')
+('msi-cyborg-15-a12v-intel-core-i5-12eme-generation', 'MSI Cyborg 15 A12V (Intel Core i5 12ème Génération)', 250000, 5, 'laptops/msicy1.png', 'gaming pro'),
+('lenovo-yoga-slim-7-amd-ryzen-5', 'Lenovo Yoga Slim 7 (AMD Ryzen 5)', 66000, 5, 'laptops/lenovoyoga01.png', 'pro'),
+('lenovo-yoga-c740-yoga-7-intel-core-i7-10eme-generation', 'Lenovo Yoga C740 / Yoga 7 (Intel Core i7 10ème Génération)', 76000, 5, 'laptops/lenovozoga1.png', 'pro'),
+('asus-vivobook-15-16-amd-ryzen-7-7000-series', 'ASUS Vivobook 15 / 16 (AMD Ryzen 7 7000 Series)', 140000, 5, 'laptops/asusvivobook1.png', 'pro gaming')
 ON CONFLICT (slug) DO UPDATE 
 SET price = EXCLUDED.price, name = EXCLUDED.name, image_url = EXCLUDED.image_url;
 
